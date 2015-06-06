@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+	xmlns:p="tapestry:parameter">
+<head>
+<meta charset="utf-8" />
+<title>${title} - Portalpujas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style type="text/css">
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+</style>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+		<div class="container">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#" t:type="PageLink" t:page="index">MiniPortal</a>
+				<a class="navbar-brand" href="#" t:type="PageLink"
+					t:page="product/FindProducts"> ${message:FindProducts}</a>
+				<t:if test="userSession">
+					<a class="navbar-brand" href="#" t:type="PageLink"
+						t:page="product/InsertarAnuncio"> ${message:adInsertion}</a>
+				</t:if>
+
+			</div>
+			<t:if test="userSession">
+				<ul class="nav navbar-nav navbar-left">
+
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">${message:consultar} <span
+							class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#" t:type="PageLink" t:page="bid/FindUserBids">${message:CheckBids}</a></li>
+							<li><a href="#" t:type="PageLink"
+								t:page="product/FindUserProducts">${message:CheckProducts}</a></li>
+						</ul></li>
+
+				</ul>
+			</t:if>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<t:if test="userSession">
+						<li class="dropdown"><a href="#" id = "bienvenida" class="dropdown-toggle"
+							data-toggle="dropdown">${userSession.firstName} <span
+								class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#" t:type="PageLink"
+									t:page="user/updateprofile">${message:updateProfile}</a></li>
+								<li><a href="#" t:type="PageLink"
+									t:page="user/changepassword">${message:changePassword}</a></li>
+								<li class="divider"></li>
+								<li><a href="#" t:type="ActionLink" t:id="logout">${message:logout}</a></li>
+							</ul></li>
+						<p:else>
+							<li><a href="#" t:type="PageLink" t:page="user/login">${message:authenticate}</a></li>
+						</p:else>
+					</t:if>
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<div class="container-fluid">
+
+		<t:if test="showTitleInBody">
+			<h3 class="text-center">${title}</h3>
+			<br />
+		</t:if>
+		<div class="col-md-2">
+			<!-- 			<ul class="nav nav-pills nav-stacked"> -->
+			<!-- 				<a href="#" t:type="PageLink" t:page="product/FindProducts">${message:BuscarProductos}</a> -->
+			<!-- 			</ul> -->
+
+			<!-- 			<t:if test="userSession"> -->
+			<!-- 				<ul class="nav nav-pills nav-stacked"> -->
+			<!-- 					<a href="#" t:type="PageLink" t:page="product/InsertarAnuncio">${message:InsertarAnuncio}</a> -->
+			<!-- 				</ul> -->
+			<!-- 			</t:if> -->
+		</div>
+		<div class="col-md-8">
+			<t:body />
+		</div>
+
+	</div>
+
+</body>
+<hr />
+<footer>
+	<p class="text-center">${message:footer}</p>
+</footer>
+</html>
