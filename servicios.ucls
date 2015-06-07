@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.8" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <interface id="1" language="java" name="es.udc.pa.pa012.portalpujas.model.bidservice.BidService" project="portalpujas" 
+    file="/portalpujas/src/main/java/es/udc/pa/pa012/portalpujas/model/bidservice/BidService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="189" y="98"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="2" language="java" name="es.udc.pa.pa012.portalpujas.model.bidservice.BidDetails" project="portalpujas" 
+    file="/portalpujas/src/main/java/es/udc/pa/pa012/portalpujas/model/bidservice/BidDetails.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="155" width="359" x="27" y="261"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" language="java" name="es.udc.pa.pa012.portalpujas.model.productservice.ProductService" 
+    project="portalpujas" 
+    file="/portalpujas/src/main/java/es/udc/pa/pa012/portalpujas/model/productservice/ProductService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1064" y="94"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="es.udc.pa.pa012.portalpujas.model.productservice.ProductDetails" 
+    project="portalpujas" 
+    file="/portalpujas/src/main/java/es/udc/pa/pa012/portalpujas/model/productservice/ProductDetails.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="173" width="365" x="848" y="240"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="es.udc.pa.pa012.portalpujas.model.util.exceptions.InvalidBidException" 
+    project="portalpujas" 
+    file="/portalpujas/src/main/java/es/udc/pa/pa012/portalpujas/model/util/exceptions/InvalidBidException.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="60" width="286" x="448" y="260"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="es.udc.pa.pa012.portalpujas.model.util.exceptions.ProductHasExpiredException" 
+    project="portalpujas" 
+    file="/portalpujas/src/main/java/es/udc/pa/pa012/portalpujas/model/util/exceptions/ProductHasExpiredException.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="83" width="286" x="440" y="53"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="7">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="8">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="9">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
