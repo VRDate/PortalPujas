@@ -129,7 +129,8 @@ public class BidServiceImpl implements BidService {
 				 * Si hay dos pujas ganadoras gana la más antigua. No se
 				 * actualiza ni el ganador ni el precio
 				 */
-				if (userBid.compareTo(product.getBidMax().getBidMax()) == 0) {
+				BigDecimal bm = product.getBidMax().getBidMax();
+				if (userBid.compareTo(prodctBidMax) == 0) {
 					Bid sameBid = new Bid(user, product, userBid,
 							Calendar.getInstance(), product.getWinner(),
 							product.getActualPrice());
